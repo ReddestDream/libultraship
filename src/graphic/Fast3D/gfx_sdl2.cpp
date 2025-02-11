@@ -258,6 +258,7 @@ static void set_fullscreen(bool on, bool call_callback) {
 
 	if (useNativeFullscreen && (on || isNativeFullscreenActive(wnd))) {
         toggleNativeFullscreen(wnd);
+	fullscreen_state = on;
     } else {
         if (on && isNativeFullscreenActive(wnd)) {
             toggleNativeFullscreen(wnd);
